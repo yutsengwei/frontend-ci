@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'make check'
+        sh 'echo \'make check\''
       }
     }
     stage('Deploy') {
@@ -17,7 +17,7 @@ pipeline {
       }
       steps {
         echo 'Deploying only because this commit is tagged...'
-        sh 'make deploy'
+        sh 'echo \'make deploy\''
       }
     }
   }
